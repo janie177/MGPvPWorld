@@ -2,3 +2,8 @@ main: com.minegusta.mgpvpworld.main.Main
 name: MGPvPWorld
 version: ${project.version}
 author: janie177
+commands:
+  pvpreload:
+    usage: /pvpreload
+    description: Reload MGPvPWorld.
+    default: op

@@ -1,2 +1,3 @@
 world: 'pvpworld'
 radius: 180
+seconds-per-item: 10

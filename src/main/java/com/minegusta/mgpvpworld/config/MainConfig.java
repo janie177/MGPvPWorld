@@ -15,6 +15,7 @@ public class MainConfig
         Main.getPlugin().saveDefaultConfig();
         radius = getConfig().getInt("radius", 200);
         world = getConfig().getString("world", "pvpworld");
+        seconds = getConfig().getInt("seconds-per-item", 10);
     }
 
     public static void saveConfig()
@@ -22,14 +23,25 @@ public class MainConfig
         Main.getPlugin().saveConfig();
     }
 
+    public static void reloadConfig()
+    {
+        Main.getPlugin().reloadConfig();
+    }
+
     //-- Methods --//
 
     private static int radius;
+    private static int seconds;
     private static String world;
 
     public static int getRadius()
     {
         return radius;
+    }
+
+    public static int getSeconds()
+    {
+        return seconds;
     }
 
     public static String getWorld()

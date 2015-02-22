@@ -12,6 +12,7 @@ public class RandomLootTask
 {
     private static int ID = -1;
     private final static int radius = MainConfig.getRadius();
+    private static final int seconds = MainConfig.getSeconds();
     private final static Location center = Bukkit.getWorld(MainConfig.getWorld()).getSpawnLocation();
 
     public static void start()
@@ -22,7 +23,7 @@ public class RandomLootTask
             {
                 runTask();
             }
-        },20 * 20, 20 * 20);
+        },20 * seconds, 20 * seconds);
     }
 
     public static void stop()

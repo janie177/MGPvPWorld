@@ -1,5 +1,6 @@
 package com.minegusta.mgpvpworld.main;
 
+import com.minegusta.mgpvpworld.command.ReloadCommand;
 import com.minegusta.mgpvpworld.config.MainConfig;
 import com.minegusta.mgpvpworld.listener.PvpListener;
 import com.minegusta.mgpvpworld.tasks.RandomLootTask;
@@ -24,6 +25,9 @@ public class Main extends JavaPlugin
 
         //Start tasks
         RandomLootTask.start();
+
+        //Commands
+        getCommand("pvpreload").setExecutor(new ReloadCommand());
     }
 
     @Override
