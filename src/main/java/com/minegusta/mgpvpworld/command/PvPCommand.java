@@ -28,6 +28,6 @@ public class PvPCommand implements CommandExecutor
             p.sendMessage(ChatColor.YELLOW + "You teleported to the PVP world.");
         }
 
-        return false;
+        return true;
     }
 }
