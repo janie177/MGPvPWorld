@@ -26,6 +26,9 @@ public class MainConfig
     public static void reloadConfig()
     {
         Main.getPlugin().reloadConfig();
+        radius = getConfig().getInt("radius", 200);
+        world = getConfig().getString("world", "pvpworld");
+        seconds = getConfig().getInt("seconds-per-item", 10);
     }
 
     //-- Methods --//
