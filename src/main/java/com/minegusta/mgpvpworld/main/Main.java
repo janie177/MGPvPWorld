@@ -1,5 +1,6 @@
 package com.minegusta.mgpvpworld.main;
 
+import com.minegusta.mgpvpworld.command.PvPCommand;
 import com.minegusta.mgpvpworld.command.ReloadCommand;
 import com.minegusta.mgpvpworld.config.MainConfig;
 import com.minegusta.mgpvpworld.listener.PvpListener;
@@ -28,6 +29,7 @@ public class Main extends JavaPlugin
 
         //Commands
         getCommand("pvpreload").setExecutor(new ReloadCommand());
+        getCommand("pvp").setExecutor(new PvPCommand());
     }
 
     @Override
