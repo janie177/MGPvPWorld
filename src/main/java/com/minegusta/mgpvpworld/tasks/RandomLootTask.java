@@ -37,17 +37,14 @@ public class RandomLootTask
         int x = Randoms.randomNumber(2*radius)-radius;
         int z = Randoms.randomNumber(2*radius)-radius;
 
-        Location dropSpot = center.add(x, 0, z);
-        dropSpot.setY(200);
+        Location dropSpot = new Location(center.getWorld(), center.getX() + (double) x, 200, center.getZ() + (double) z);
 
-        if(Bukkit.getWorld(MainConfig.getWorld()).getPlayers().size() < 2)return;
+        if(Bukkit.getWorld(MainConfig.getWorld()).getPlayers().size() < 1)return;
 
         if(!dropSpot.getChunk().isLoaded())return;
 
         ItemStack dropped = DropList.valueOf("I" + Integer.toString(Randoms.randomNumber(DropList.values().length))).get();
 
         center.getWorld().dropItemNaturally(dropSpot, dropped);
-
-
     }
 }
